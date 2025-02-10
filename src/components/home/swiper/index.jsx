@@ -6,6 +6,12 @@ import "swiper/css/navigation"
 import "swiper/css/pagination"
 import {Pagination, Autoplay} from "swiper/modules"
 
+// img
+import img1 from "../../../assets/img/1.png"
+import img2 from "../../../assets/img/2.png"
+import img3 from "../../../assets/img/3.png"
+import img4 from "../../../assets/img/4.png"
+
 const SwiperComponent = () => {
     return (
         <Swiper
@@ -16,21 +22,21 @@ const SwiperComponent = () => {
             className="w-full h-85 max-[900px]:h-60 max-[500px]:h-40 max-[460px]:h-32">
             <SwiperSlide>
                 <img
-                    src="https://statica.alifshop.uz/shop/catalog/carousel/270/1738232138-Сайт главная 1600х491.png"
+                    src={img1}
                     alt="Slide 1"
                     className="w-full h-full object-fill rounded-xl"
                 />
             </SwiperSlide>
             <SwiperSlide>
                 <img
-                    src="https://statica.alifshop.uz/shop/catalog/carousel/268/1737111160-sokany_ru_1600х491.png"
+                    src={img2}
                     alt="Slide 2"
                     className="w-full h-full object-fill rounded-xl"
                 />
             </SwiperSlide>
             <SwiperSlide>
                 <img
-                    src="https://statica.alifshop.uz/shop/catalog/carousel/261/1735129880-One plus one 1600x491 RU.png"
+                    src={img3}
                     alt="Slide 3"
                     className="w-full h-full object-fill rounded-xl"
                 />
@@ -38,7 +44,7 @@ const SwiperComponent = () => {
 
             <SwiperSlide>
                 <img
-                    src="https://statica.alifshop.uz/shop/catalog/carousel/265/1736504229-shop_Genau_1600x491_ru.png"
+                    src={img4}
                     alt="Slide 4"
                     className="w-full h-full object-fill rounded-xl"
                 />
