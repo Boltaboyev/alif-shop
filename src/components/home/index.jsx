@@ -29,11 +29,13 @@ const HomeComponent = () => {
         <section className="py-[20px]">
             <SwiperComponent />
 
-            <h1 class="text-3xl font-medium text-gray-900 p-[30px_0_12px_0]">Скидки</h1>
+            <h1 className="text-3xl font-medium text-gray-900 p-[30px_0_12px_0]">
+                Скидки
+            </h1>
             {!productData.length ? (
-                <div className="grid grid-cols-5 gap-[20px]">
-                    {[...Array(10)].map((_) => (
-                        <div role="status" className="max-w-sm">
+                <div className="grid grid-cols-5 gap-[20px] max-[1170px]:grid-cols-4 max-[885px]:grid-cols-3 max-[695px]:grid-cols-2 max-[400px]:grid-cols-1">
+                    {[...Array(10)].map((_, idx) => (
+                        <div key={idx} role="status" className="max-w-sm">
                             <div className="animate-pulse w-full bg-gray-300 h-48 rounded-lg mb-5 flex justify-center items-center">
                                 <svg
                                     className="w-8 h-8 stroke-gray-400"
@@ -58,7 +60,7 @@ const HomeComponent = () => {
                 </div>
             ) : (
                 <div className="flex flex-col gap-[30px] justify-center">
-                    <div className="grid grid-cols-5 gap-[20px]">
+                    <div className="grid grid-cols-5 gap-[20px] max-[1170px]:grid-cols-4 max-[885px]:grid-cols-3 max-[695px]:grid-cols-2 max-[400px]:grid-cols-1">
                         {productData.slice(0, page).map((value) => (
                             <Card key={value.id} {...value} />
                         ))}
@@ -66,7 +68,7 @@ const HomeComponent = () => {
                     {page < productData.length && (
                         <button
                             onClick={handleLoadMore}
-                            className="bg-[#ffe299] w-fit self-center p-[9px_200px] rounded-xl cursor-pointer hover:bg-[#ffc01fb7] transition duration-[.2s]">
+                            className="bg-[#ffe299] w-fit self-center p-[9px_200px] max-[570px]:p-[9px_30px] rounded-xl cursor-pointer hover:bg-[#ffc01fb7] transition duration-[.2s]">
                             Показать ещё
                         </button>
                     )}
